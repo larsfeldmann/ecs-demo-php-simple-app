@@ -1,0 +1,48 @@
+
+Types of environments:
+
+E-FC) fully integrated cloud: each system needed in a test is created in the cloud
+E-PI) partially integrated cloud/on premise: most systems needed are created in the cloud but some are connected on premise (licensing etc.)
+
+E-PIM) partially integrated cloud/mocked: most systems are created in the cloud; some are 'mocked'
+
+E-M) on premise mocked 1 level: dev pc hosts a source system in a container that mocks that systems behaviour in the context of the test being executed
+
+Circle of Concerns:
+C1) not the right knowledge to complete a POC quickly
+C2) not sure who's the best person to show this to
+C3) what if this doesn't get the right attention?
+C4) are the right business needs addressed?
+
+Addressing of Concerns:
+C3) Need to make sure to have the right information for the right person.
+    * work out candidate stakeholders
+    * personalise requirements for each stakeholder
+    * the POC needs to be relevant
+    * get to know the current environment set up procedure
+
+
+Circle of Influence:
+People (candidates):
+* Adam Wylie
+* Courteney Fraser
+* Warren Cameron
+* Robert Davison
+* Berhane Merhazion 
+* Karin Muller
+
+2020 ICT Strategy
+* Secure, Stable and Predictable
+* Increased Clock Speed
+* Technology-enabled Innovation
+
+2017 Leadership off-site meeting:
+Frpm Karen Muller's email: The offsite was very productive and a host of actions were agreed to by the team. There was insufficient time to cover all the topics, so the team will be catching up over the next few weeks on a number of other priority areas including:
+* BI, 
+* Business and Technical ownership, 
+* stakeholder engagement, and 
+* innovation. 
+
+
+Other shortfalls currently known
+* Non repeatable test, e.g. environments are not set up with correlating data across systems

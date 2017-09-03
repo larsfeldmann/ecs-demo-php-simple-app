@@ -1,11 +1,6 @@
 {
     "family": "console-sample-app",
-    "volumes": [
-        {
-            "name": "my-vol",
-            "host": {}
-        }
-    ],
+    "volumes": [],
     "containerDefinitions": [
         {
             "environment": [],
@@ -19,37 +14,7 @@
                     "hostPort": 80
                 }
             ],
-            "mountPoints": [
-                {
-                    "sourceVolume": "my-vol",
-                    "containerPath": "/var/www/my-vol"
-                }
-            ],
-            "entryPoint": [
-                "/usr/sbin/apache2",
-                "-D",
-                "FOREGROUND"
-            ],
             "essential": true
-        },
-        {
-            "name": "busybox",
-            "image": "busybox",
-            "cpu": 10,
-            "memory": 500,
-            "volumesFrom": [
-            {
-              "sourceContainer": "simple-app"
-            }
-            ],
-            "entryPoint": [
-                "sh",
-                "-c"
-            ],
-            "command": [
-                "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-            ],
-            "essential": false
         }
     ]
 }
