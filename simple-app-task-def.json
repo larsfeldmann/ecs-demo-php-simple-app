@@ -7,14 +7,23 @@
             "name": "simple-app",
             "image": "amazon/amazon-ecs-sample",
             "cpu": 10,
+            "essential": true,
             "memory": 500,
             "portMappings": [
                 {
-                    "containerPort": 80,
-                    "hostPort": 80
+                    "hostPort": "80",
+                    "containerPort": "80",
+                    "protocol": "tcp"
                 }
             ],
-            "essential": true
+            "entryPoint": [
+                "sh",
+                "c"
+            ],
+            "command": [
+                "npm start"
+            ],
+            "workingDirectory": "/usr/src/app",            
         }
     ]
 }
